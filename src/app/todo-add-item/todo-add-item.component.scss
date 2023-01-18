@@ -1,0 +1,45 @@
+.todos {
+  form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.todo-input {
+  padding: 10px 15px;
+  appearance: none;
+  border: none;
+  background-color: #f3f3f3;
+  font-size: 20px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: rubik;
+}
+
+.todo-submit {
+  width: 150px;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #fe4880;
+  color: #fff;
+  padding: 10px 15px;
+  font-family: rubik;
+  font-size: 18px;
+  font-weight: 500;
+}
+.selectclass {
+  padding: 10px 15px;
+  appearance: none;
+  border: none;
+  background-color: #f3f3f3;
+  font-size: 20px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: rubik;
+}

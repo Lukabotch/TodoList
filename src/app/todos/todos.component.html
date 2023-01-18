@@ -1,0 +1,6 @@
+<div class="todostages">
+  <app-to-do-component [todos]="todos" [inProgress]="inProgress" (delete) = "addDeleteHandler($event)" (transferFromTodo)="transferTodo($event)"></app-to-do-component>
+  <app-inprogress-component [todos]="todos" [inProgress]="inProgress" [doneMain]="doneMain" (transferDone)="transferTodoDone($event)" (transferLeft)="todoProgressLeft($event)"></app-inprogress-component>
+  <app-done-component [inProgress]="inProgress" [doneMain]="doneMain" (todoDoneLeft)="todoDoneLeft($event)"></app-done-component>
+</div>
+

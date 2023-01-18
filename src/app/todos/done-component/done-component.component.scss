@@ -1,0 +1,107 @@
+.todo {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  border-radius: 3px;
+  &:nth-child(even) {
+    background-color: #eee;
+  }
+  &:last-of-type {
+    border-bottom: 0;
+  }
+  .id {
+    flex: 1 1 50px;
+  }
+  .content {
+    flex: 1 1 100%;
+  }
+}
+
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  &:hover {
+    padding-top: 2px;
+    color: #fe4880;
+  }
+}
+.todostages {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.to-do,
+.inProgress,
+.doneTodo {
+  font-family: rubik;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 150px;
+  background-color: #a3a2996f;
+  /* padding: 15px; */
+  gap: 15px;
+  border-radius: 8px;
+}
+.todoHead {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f1f1;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.todoMainContent,
+.inProgressMain,
+.doneMain {
+  padding: 0 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todoRight {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: rgb(56, 89, 7);
+  }
+  &:nth-child(even) {
+    &:hover {
+      color: rgb(20, 56, 173);
+    }
+  }
+}
+
+.orange {
+  background-color: #d6a02c;
+  border-radius: 3px;
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+  color: #ffffff;
+}
+.green {
+  background-color: #73891c;
+  border-radius: 3px;
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+  color: #ffffff;
+}
+.red {
+  background-color: #891c1c;
+  color: #ffffff;
+  border-radius: 3px;
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+}

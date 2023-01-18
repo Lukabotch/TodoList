@@ -1,0 +1,17 @@
+<div class="todos">
+  <form (submit)="addTodo()">
+    <input
+      type="text"
+      name="InputTodo"
+      placeholder="Enter..."
+      class="todo-input"
+      [(ngModel)]="inputTodo"
+    />
+    <select name="todoDifficulty" class="selectclass" id=""[(ngModel)]="todoDifficulty">
+      <option value="Easy" selected="selected" >Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+    <input type="submit" value="Add Todo" class="todo-submit" />
+  </form>
+</div>

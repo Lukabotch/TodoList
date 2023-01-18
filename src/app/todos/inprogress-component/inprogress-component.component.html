@@ -1,0 +1,33 @@
+<div class="inProgress">
+  <div class="todoHead"><i class="fa-solid fa-list"></i>In Progress</div>
+  <div class="inProgressMain">
+    <div class="listEmpty" *ngIf="inProgress.length < 1">The list is empty</div>
+
+    <div
+      class="todo"
+      *ngFor="let progress of inProgress; let progressIndex = index"
+    >
+      <div class="id">{{ progressIndex + 1 }}.</div>
+      <div class="content">
+        {{ progress.content }}
+        <div
+          [ngClass]="
+            progress.difficulty == 'Medium'
+              ? 'orange'
+              : progress.difficulty == 'Easy'
+              ? 'green'
+              : 'red'
+          "
+        >
+          {{ progress.difficulty }}
+        </div>
+      </div>
+      <button class="todoRight" (click)="transferToLeft(progressIndex)">
+        <i class="fa-solid fa-circle-left fa-xl"></i>
+      </button>
+      <button class="todoRight" (click)="transferTodoDone(progressIndex)">
+        <i class="fa-solid fa-circle-right fa-xl"></i>
+      </button>
+    </div>
+  </div>
+</div>

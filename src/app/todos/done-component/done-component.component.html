@@ -1,0 +1,27 @@
+<div class="doneTodo">
+  <div class="todoHead"><i class="fa-solid fa-list"></i>Done</div>
+  <div class="doneMain">
+    <div class="listEmpty" *ngIf="doneMain.length < 1">The list is empty</div>
+
+    <div class="todo" *ngFor="let doneTodos of doneMain; let doneIndex = index">
+      <div class="id">{{ doneIndex + 1 }}.</div>
+      <div class="content">
+        {{ doneTodos.content }}
+        <div
+          [ngClass]="
+            doneTodos.difficulty == 'Medium'
+              ? 'orange'
+              : doneTodos.difficulty == 'Easy'
+              ? 'green'
+              : 'red'
+          "
+        >
+          {{ doneTodos.difficulty }}
+        </div>
+      </div>
+      <button class="todoRight" (click)="fromDoneLeft(doneIndex)">
+        <i class="fa-solid fa-circle-left fa-xl"></i>
+      </button>
+    </div>
+  </div>
+</div>

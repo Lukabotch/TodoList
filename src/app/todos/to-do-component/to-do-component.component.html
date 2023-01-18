@@ -1,0 +1,29 @@
+<div class="to-do">
+  <div class="todoHead"><i class="fa-solid fa-list"></i>To-do</div>
+  <div class="todoMainContent">
+    <div class="listEmpty" *ngIf="todos.length < 1">The list is empty</div>
+    <div class="todo" *ngFor="let todo of todos; let i = index">
+      <div class="id">{{ i + 1 }}.</div>
+      <div class="content">
+        {{ todo.content }}
+        <div
+          [ngClass]="
+            todo.difficulty == 'Medium'
+              ? 'orange'
+              : todo.difficulty == 'Easy'
+              ? 'green'
+              : 'red'
+          "
+        >
+          {{ todo.difficulty }}
+        </div>
+      </div>
+      <button class="delete" (click)="deleteTodo(i)">
+        <i class="fa-solid fa-trash fa-xl"></i>
+      </button>
+      <button class="todoRight" (click)="transferTodo(i)">
+        <i class="fa-solid fa-circle-right fa-xl"></i>
+      </button>
+    </div>
+  </div>
+</div>

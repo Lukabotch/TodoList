@@ -1,0 +1,9 @@
+<div class="app">
+  <header>
+    <h1 style="font-family: rubik; font-weight: 500; font-size: 20px">
+      Todo List
+    </h1>
+  </header>
+  <app-todo-add-item (todoAdd)="addTodoHandler($event)"></app-todo-add-item>
+  <app-todos [todos]="todos" [inProgress]="inProgress" [doneMain]="doneMain" (delete)="addDeleteHandler($event)" (transferFromTodo)="transferTodo($event)" (transferDone)="transferTodoDone($event)" (transferToTodo) = 'transferToTodo($event)' (fromDoneLeft)="todoDoneLeft($event)"> </app-todos>
+</div>
